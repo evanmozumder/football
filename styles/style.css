@@ -1,0 +1,259 @@
+/* common styles  */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ------------- header styles ------------- */
+
+header {
+  background-color: #2d25a0;
+  color: white;
+  padding-bottom: 80px;
+}
+header:hover .info {
+  transform: translate(300%);
+  transition: transform 3s;
+}
+header:hover .transition-element {
+  /* display: block; */
+  transform: translate(200px);
+  transition: transform 5s;
+}
+
+/* ----- header nav styles -----  */
+
+.header-section {
+  width: 80%;
+  margin: 0 auto 20px;
+}
+nav {
+  padding: 42px 0;
+}
+nav,
+nav > ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+li {
+  list-style-type: none;
+  margin-right: 30px;
+}
+a {
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
+.link-button {
+  color: white;
+  background-color: #e02c6d;
+  padding: 10px 24px;
+}
+.fa-sign-in-alt {
+  margin-right: 8px;
+}
+
+/* ---- common style ----  */
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ---- common style complete ------  */
+
+.banner img {
+  width: 557px;
+  height: 438px;
+  padding-right: 20px;
+}
+.info {
+  margin-left: 35px;
+  font-size: 40px;
+}
+.header-info a {
+  font-size: 16px;
+}
+
+/* ------------ header styles complete ------------  */
+
+/* ---------------- main section ------------------- */
+
+main {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* ----- article section styles ----- */
+
+.players {
+  margin: 70px 0 160px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 30px;
+}
+.player {
+  border: 2px solid #ffffff;
+  width: 330px;
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
+  justify-self: center;
+}
+.player img {
+  width: 300px;
+  height: 256px;
+}
+.player h1 {
+  font-size: 28px;
+  margin: 0;
+}
+.player p {
+  font-size: 16px;
+}
+.player-information {
+  padding: 15px;
+}
+
+/* -------- article section styles complete ---------  */
+
+/* ----- highlight section styles -----  */
+
+.highlight-text img {
+  max-width: 100%;
+}
+.photo {
+  position: relative;
+  /* width: 300px; */
+}
+.photo img {
+  width: 100%;
+  /* border-radius: 10px; */
+}
+.photo-detail {
+  display: none;
+  position: absolute;
+  max-width: 80%;
+  top: 100px;
+}
+.photo:hover .photo-detail {
+  display: block;
+  margin: 0 auto;
+  background-color: rgba(172, 162, 139, 0.482);
+}
+.photo:hover img {
+  transform: scale(1.1, 1.1);
+  transition: transform 2s ease-in-out;
+}
+.highlight-text {
+  justify-content: space-between;
+  margin-bottom: 150px;
+}
+.highlight {
+  margin-right: 70px;
+}
+
+/* ---- highlight section styles complete ----  */
+
+/* ------------- footer styles ---------------- */
+
+footer {
+  margin: 0 auto 400px;
+  max-width: 500px;
+  max-height: 220px;
+  justify-content: center;
+  align-items: center;
+}
+footer img {
+  display: block;
+  margin: 0 auto;
+  justify-content: center;
+  max-width: 70%;
+}
+footer p {
+  text-align: center;
+}
+.social {
+  margin-right: 15px;
+}
+
+/* --------- footer styles complete ----------- */
+
+/* ------------ responsive for mobile device -------------- */
+
+@media only screen and (max-width: 688px) {
+  .header-section {
+    width: 100%;
+  }
+  nav {
+    flex-direction: column;
+  }
+  li {
+    margin-right: 20px;
+  }
+  main {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .flex-container {
+    flex-direction: column;
+  }
+  .banner img {
+    width: 400px;
+    height: 300px;
+    padding: 70px 20px 0 0;
+  }
+  .info {
+    padding-right: 20px;
+  }
+  .info h1 {
+    font-size: 35px;
+  }
+  .players {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .highlight-text {
+    margin: 0 5px 80px;
+  }
+  .highlight {
+    margin-bottom: 40px;
+  }
+  .photo-detail {
+    top: 50px;
+  }
+}
+
+/* ----------- responsive for tablet device ------------ */
+
+@media only screen and (min-width: 688px) and (max-width: 992px) {
+  .header-section {
+    width: 100%;
+  }
+  nav {
+    flex-direction: column;
+  }
+  li {
+    margin-right: 20px;
+  }
+  .flex-container {
+    flex-direction: column;
+  }
+  .players {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .info {
+    padding-right: 20px;
+  }
+  .info h1 {
+    font-size: 35px;
+  }
+  .highlight-text {
+    margin: 0 5px 30px;
+  }
+  .highlight {
+    margin-bottom: 40px;
+  }
+  footer {
+    margin-bottom: 800px;
+  }
+}

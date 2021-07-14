@@ -13,13 +13,8 @@ header {
   padding-bottom: 80px;
 }
 header:hover .info {
-  transform: translate(300%);
+  transform: translate(20%, 20%);
   transition: transform 3s;
-}
-header:hover .transition-element {
-  /* display: block; */
-  transform: translate(200px);
-  transition: transform 5s;
 }
 
 /* ----- header nav styles -----  */
@@ -76,7 +71,18 @@ a {
 .header-info a {
   font-size: 16px;
 }
-
+.football img {
+  margin-top: 75px;
+  width: 100px;
+  height: 100px;
+  visibility: hidden;
+  position: absolute;
+}
+header:hover .football img {
+  visibility: visible;
+  transform: translate(-1000px, -200px);
+  transition: transform 4s;
+}
 /* ------------ header styles complete ------------  */
 
 /* ---------------- main section ------------------- */
@@ -124,11 +130,9 @@ main {
 }
 .photo {
   position: relative;
-  /* width: 300px; */
 }
 .photo img {
   width: 100%;
-  /* border-radius: 10px; */
 }
 .photo-detail {
   display: none;
@@ -147,13 +151,22 @@ main {
 }
 .highlight-text {
   justify-content: space-between;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
 }
 .highlight {
   margin-right: 70px;
 }
 
 /* ---- highlight section styles complete ----  */
+
+/* newsletter section  */
+
+.newsletter {
+  text-align: center;
+  margin-bottom: 150px;
+}
+
+/* ------ newsletter section complete ------- */
 
 /* ------------- footer styles ---------------- */
 
@@ -190,6 +203,11 @@ footer p {
   }
   li {
     margin-right: 20px;
+  }
+  .football img {
+    margin-top: 90px;
+    width: 80px;
+    height: 80px;
   }
   main {
     width: 90%;
